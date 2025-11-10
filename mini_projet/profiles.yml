@@ -1,0 +1,11 @@
+mini_projet:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: mini-projet-477710
+      dataset: miniProjet
+      keyfile: C:\Users\MSI\dbt-projects\mini_projet\mini-projet-477710-7dfa6c156116.json
+      threads: 4
+      timeout_seconds: 300

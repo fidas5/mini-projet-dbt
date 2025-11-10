@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: miniProjet
+    database: mini-projet-477710   # ton projet BigQuery
+    schema: miniProjet              # dataset où sont tes CSV
+    tables:
+      - name: customers
+      - name: leads
+      - name: organizations
+      - name: products
+      - name: people
