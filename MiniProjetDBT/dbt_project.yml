@@ -1,0 +1,45 @@
+# Name of your project (lowercase recommended, but here we keep original)
+name: 'MiniProjetDBT'
+version: '1.0.0'
+
+# Profile to use
+profile: 'MiniProjetDBT'
+
+# Paths to project resources
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Directories to clean when running `dbt clean`
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configuration
+models:
+  MiniProjetDBT:
+
+    # Staging models
+    staging:
+      +schema: MiniProjetDBT_staging    # Dataset for staging tables
+      +materialized: table              # Tables, not views
+
+    # Intermediate models
+    intermediate:
+      +schema: MiniProjetDBT_intermediate
+      +materialized: table
+
+    # Mart models
+    mart:
+      +schema: MiniProjetDBT_mart
+      +materialized: table
+
+# Seeds configuration (CSV files)
+seeds:
+  MiniProjetDBT:
+    +schema: MiniProjetDBT_raws
+    +quote_columns: true
+    +delimiter: ","

@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdm.toml
+*.pdm.lock
+*.env
+env/
+venv/
+dbt-venv/
+*.sqlite3
+
+# DBT compiled / temp files
+target/
+dbt_packages/
+logs/
+manifest.json
+run_results.json
+catalog.json
+sources.yml
+
+# Ignore secrets / credentials
+*.json
+profiles.yml
+*.key
+*.pem
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore any other local configs
+*.local
+*.bak
+*.swp
